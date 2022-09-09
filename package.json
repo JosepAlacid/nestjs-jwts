@@ -19,7 +19,7 @@
     "pretest:watch": "yarn pretest",
     "test:watch": "dotenv -e .env.test -- jest -i --watch -c jest.config.json",
     "test:cov": "dotenv -e .env.test -- jest -i --coverage -c jest.config.json",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:debug": "node --inspect=127.0.0.1:9228 -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand ",
     "pretest:e2e": "yarn pretest",
     "test:e2e": "dotenv -e .env.test -- jest -i --no-cache -c ./test/jest-e2e.json"
   },
